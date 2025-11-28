@@ -7,8 +7,9 @@ mcp = FastMCP("TresataDataProcessor")
 
 @mcp.tool()
 def list_files() -> str:
-    """Lists available CSV files in TrainingData."""
+    """Lists available CSV files in Training_data."""
     try:
+        # Correct folder: Training_data
         files = [f for f in os.listdir('Training_data') if f.endswith('.csv')]
         return "\n".join(files) if files else "No CSV files found."
     except Exception as e:
@@ -17,6 +18,7 @@ def list_files() -> str:
 @mcp.tool()
 def predict_column(filename: str, column_name: str) -> str:
     """Predicts column type (Phone, Company, etc.)."""
+    # Correct folder: Training_data
     file_path = os.path.join("Training_data", filename)
     if not os.path.exists(file_path): return "Error: File not found."
         
@@ -31,8 +33,11 @@ def predict_column(filename: str, column_name: str) -> str:
 @mcp.tool()
 def parse_file(filename: str) -> str:
     """Parses file and saves to output.csv."""
-    file_path = os.path.join("outputs", filename)
-    if not os.path.exists(file_path): return "Error: File not found."
+    # FIXED: Changed "outputs" to "Training_data"
+    file_path = os.path.join("Training_data", filename)
+    
+    if not os.path.exists(file_path): 
+        return f"Error: File '{filename}' not found in Training_data."
 
     try:
         result = subprocess.run(
