@@ -118,12 +118,5 @@ Mcp (Model Context Protocol SDK)
 
 ---
 
-### **Copy this into `requirements.txt`**
 
-```text
-pandas
-phonenumbers
-python-dateutil
-pycountry
-mcp
-argparse
+
