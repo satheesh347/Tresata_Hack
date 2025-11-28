@@ -25,13 +25,13 @@ This project solves the challenge of processing unlabelled data columns in raw C
 # Setup & Installation
 Prerequisites: Python 3.10+
 
-Clone the Repository
+## Clone the Repository
 
 Install Dependencies Run the following command to install the necessary libraries:
 
 Bash
 
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 # Usage Instructions
 Part A: Semantic Classification (predict.py)
 This script takes a file path and a specific column name, analyzes the values based on regex patterns and dictionary lookups, and returns the semantic label.
