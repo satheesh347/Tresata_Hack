@@ -1,12 +1,12 @@
 # Semantic Column Classifier & Parser (IIT Madras Hack)
 
-## 📌 Overview
+##  Overview
 This project solves the challenge of processing unlabelled data columns in raw CSV files. It uses a custom-built pipeline to automatically:
 1.  **Classify** columns into semantic types (Phone Number, Company Name, Country, Date, Other).
 2.  **Parse & Normalize** the data (e.g., splitting phone numbers into Country/Number, or separating Company Names from Legal Suffixes).
 3.  **Connect** to AI Agents via a Model Context Protocol (MCP) server.
 
-## 📂 Project Structure
+##  Project Structure
 ```text
 /
 ├── predict.py           # Part A: CLI tool for semantic column classification
